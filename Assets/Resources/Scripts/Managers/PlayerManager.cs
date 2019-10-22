@@ -10,11 +10,7 @@ public class PlayerManager
     {
         get
         {
-            if (instance == null)
-            {
-                instance = new PlayerManager();
-            }
-            return instance;
+            return instance ?? (instance = new PlayerManager());
         }
     }
     private static PlayerManager instance;

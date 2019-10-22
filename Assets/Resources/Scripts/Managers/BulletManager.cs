@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletManager : MonoBehaviour
+public class BulletManager
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Singleton
+    public static BulletManager Instance
     {
-        
+        get
+        {
+            return instance ?? (instance = new BulletManager());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private static BulletManager instance;
+
+    private BulletManager() { }
+    #endregion
 }

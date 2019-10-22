@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Singleton
+    public static LevelManager Instance
     {
-        
+        get
+        {
+            return instance ?? (instance = new LevelManager());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private static LevelManager instance;
+
+    private LevelManager() { }
+    #endregion
+
+    int currentLevel;
+    int astroidCount;
 }
