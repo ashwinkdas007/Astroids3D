@@ -18,24 +18,24 @@ public class GameFlow {
     public void Initialize()
     {
         PlayerManager.Instance.Initialize();
-        //BulletManager.Instance.Initialize();
+        AstroidManager.Instance.Initialize();
     }
 
     public void PostInitialize()
     {
         PlayerManager.Instance.PostInitialize();
-        //BulletManager.Instance.PostInitialize();
+        //AstroidManager.Instance.PostInitialize();
     }
     public void Refresh()
     {
         PlayerManager.Instance.Refresh();
-        //BulletManager.Instance.Refresh();
+        AstroidManager.Instance.Refresh();
     }
 
     public void PhysicsRefresh()
     {
         PlayerManager.Instance.PhysicsRefresh();
-        //BulletManager.Instance.PhysicsRefresh();
+        //AstroidManager.Instance.PhysicsRefresh();
     }
 
 

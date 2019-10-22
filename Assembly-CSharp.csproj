@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{E2C315B1-16DB-09FE-14B0-69A3F5ABBF77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -68,7 +67,6 @@
     <Compile Include="Assets\Resources\Scripts\Entities\Alien.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Astroid.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Bullets.cs" />
-    <Compile Include="Assets\Resources\Scripts\Entities\ISpawnable.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Player.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Unit.cs" />
     <Compile Include="Assets\Resources\Scripts\Flow\GameFlow.cs" />
@@ -78,6 +76,7 @@
     <Compile Include="Assets\Resources\Scripts\Managers\BulletManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\PlayerManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\ProbabilityFunctions.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/aashwink/UnityProjects/Astroids3D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Unit, ISpawnable
+public class Player : Unit
 {
 
 
@@ -25,10 +25,6 @@ public class Player : Unit, ISpawnable
         Teleport();
     }
 
-    public GameObject Spawn(GameObject prefab, Vector3 pos)
-    {
-        return GameObject.Instantiate(prefab, pos, Quaternion.identity);
-    }
 
     void Teleport()
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alien : Unit, ISpawnable
+public class Alien : Unit
 {
     public override void PhysicsRefresh()
     {
@@ -16,8 +16,5 @@ public class Alien : Unit, ISpawnable
 
     }
 
-    public GameObject Spawn(GameObject prefab, Vector3 pos)
-    {
-        return GameObject.Instantiate(prefab, pos, Quaternion.identity);
-    }
+
 }

@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Astroid : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PostInitialize()
     {
-        
+
+    }
+
+    public void Refresh()
+    {
+
+    }
+
+    public void PhysicsRefresh()
+    {
+
     }
 }
