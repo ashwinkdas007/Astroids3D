@@ -24,6 +24,7 @@ public class GameFlow {
         {
             PlayerManager.Instance.Initialize();
             AstroidManager.Instance.Initialize();
+            MissileManager.Instance.Initialize();
         } 
         else
         {
@@ -49,6 +50,7 @@ public class GameFlow {
         {
             PlayerManager.Instance.Refresh();
             AstroidManager.Instance.Refresh();
+            MissileManager.Instance.Refresh();
         } 
         else
         {
@@ -62,6 +64,7 @@ public class GameFlow {
         {
             PlayerManager.Instance.PhysicsRefresh();
             //AstroidManager.Instance.PhysicsRefresh();
+            MissileManager.Instance.PhysicsRefresh();
         }
         else
         {

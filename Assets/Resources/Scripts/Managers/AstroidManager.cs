@@ -19,7 +19,6 @@ public class AstroidManager
     private AstroidManager() { }
     #endregion
 
-    public List<Astroid> astroid { get; private set; }
     GameObject[] astroidPrefabs;
     GameObject raycastSource;
     Transform astroidParent;
@@ -84,6 +83,7 @@ public class AstroidManager
         GameObject go = GameObject.Instantiate(astroidPrefabs[ProbabilityFunctions.DiceRoll(astroidType.Count)], GetRandomUnoccupiedLocation(), Quaternion.identity, astroidParent.transform);
         Astroid a = go.AddComponent<Astroid>();
         a.Initialize();
+        a.PostInitialize();
         astroids.Add(a);
     }
 }

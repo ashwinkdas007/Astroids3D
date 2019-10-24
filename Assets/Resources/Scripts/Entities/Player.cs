@@ -16,6 +16,11 @@ public class Player : Unit
         Move(moveDir * moveForce);
         Rotate(turnDir * turnTorque);
 
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            MissileManager.Instance.FireMissile();
+        }
+
     }
 
     public override void Refresh()

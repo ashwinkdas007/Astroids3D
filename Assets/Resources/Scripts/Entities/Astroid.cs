@@ -13,7 +13,7 @@ public class Astroid : MonoBehaviour
 
     public void PostInitialize()
     {
-        GetComponent<Rigidbody>().angularVelocity = Random.insideUnitSphere * tumble;
+        gameObject.GetComponent<Rigidbody>().angularVelocity = Random.insideUnitSphere * tumble;
     }
 
     public void Refresh()

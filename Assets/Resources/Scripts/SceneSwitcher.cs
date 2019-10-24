@@ -8,6 +8,7 @@ public class SceneSwitcher : MonoBehaviour
     public void GotoMainScene()
     {
         GameFlow.Instance.startGame = true;
+        GameFlow.Instance.Initialize();
         SceneManager.LoadScene("MainScene");
     }
 

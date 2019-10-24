@@ -22,8 +22,9 @@ public class MainMenuManager
     
     public void Initialize()
     {
-        GameObject playerPrefab = Resources.Load<GameObject>("Prefabs/SpaceShipTitle");
+        GameObject playerPrefab = PlayerManager.Instance.playerPrefab;
         mainMenuShip = GameObject.Instantiate(playerPrefab, new Vector3(0, 0, 16),new Quaternion(0,90,0,90)).AddComponent<MainMenuShip>();
+        //GameObject.Destroy(mainMenuShip.transform.GetChild(0).gameObject);
         mainMenuShip.Initialize();
 
     }
