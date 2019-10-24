@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 5655638034542020815}
   - component: {fileID: 5627656175042312093}
   - component: {fileID: 5638333647866078573}
-  - component: {fileID: 9215012769084850980}
   - component: {fileID: 372439196568581941}
   m_Layer: 0
   m_Name: SpaceShip
@@ -126,20 +125,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9215012769084850980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5649828456357383957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e1ef9ba1d642a4eaee94475c3cc1a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveForce: 30
-  turnTorque: 15
 --- !u!54 &372439196568581941
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -457,6 +442,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5655638034542020815}
     m_Modifications:
+    - target: {fileID: 6089383157026568370, guid: d7fb9473438d44d498e313a08af41337,
+        type: 3}
+      propertyPath: m_Name
+      value: fire
+      objectReference: {fileID: 0}
     - target: {fileID: 6089383157026816408, guid: d7fb9473438d44d498e313a08af41337,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -511,11 +501,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6089383157026568370, guid: d7fb9473438d44d498e313a08af41337,
-        type: 3}
-      propertyPath: m_Name
-      value: fire
       objectReference: {fileID: 0}
     - target: {fileID: 6089383157012710288, guid: d7fb9473438d44d498e313a08af41337,
         type: 3}

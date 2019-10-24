@@ -13,34 +13,60 @@ public class GameFlow {
         }
     }
     private static GameFlow instance;
+    private GameFlow() { }
     #endregion
+
+    public bool startGame;
 
     public void Initialize()
     {
-        PlayerManager.Instance.Initialize();
-        AstroidManager.Instance.Initialize();
-        SkyboxManager.Instance.Initialize();
+        if (startGame)
+        {
+            PlayerManager.Instance.Initialize();
+            AstroidManager.Instance.Initialize();
+        } 
+        else
+        {
+            MainMenuManager.Instance.Initialize();
+        }       
     }
 
     public void PostInitialize()
     {
-        PlayerManager.Instance.PostInitialize();
-        SkyboxManager.Instance.PostInitialize();
-        //AstroidManager.Instance.PostInitialize();
+        if (startGame)
+        {
+            PlayerManager.Instance.PostInitialize();
+            //AstroidManager.Instance.PostInitialize();
+        } 
+        else
+        {
+            MainMenuManager.Instance.PostInitialize();
+        }
     }
     public void Refresh()
     {
-        PlayerManager.Instance.Refresh();
-        AstroidManager.Instance.Refresh();
-        SkyboxManager.Instance.Refresh();
-        
+        if(startGame)
+        {
+            PlayerManager.Instance.Refresh();
+            AstroidManager.Instance.Refresh();
+        } 
+        else
+        {
+            MainMenuManager.Instance.Refresh();
+        } 
     }
 
     public void PhysicsRefresh()
     {
-        PlayerManager.Instance.PhysicsRefresh();
-        //AstroidManager.Instance.PhysicsRefresh();
-        SkyboxManager.Instance.PhysicsRefresh();
+        if (startGame)
+        {
+            PlayerManager.Instance.PhysicsRefresh();
+            //AstroidManager.Instance.PhysicsRefresh();
+        }
+        else
+        {
+            MainMenuManager.Instance.PhysicsRefresh();
+        } 
     }
 
 

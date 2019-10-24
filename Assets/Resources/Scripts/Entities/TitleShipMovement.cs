@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitleShipMovement:MonoBehaviour
+public class MainMenuShip:MonoBehaviour
 {
     public GameObject go;
     bool Up = true;
@@ -31,7 +31,7 @@ public class TitleShipMovement:MonoBehaviour
     {
         RenderSettings.skybox.SetFloat("_Rotation", Time.time * 2);
         goUp();
-        Debug.Log(transform.position.y);
+        //Debug.Log(transform.position.y);
         //barrelRoll();
     }
 

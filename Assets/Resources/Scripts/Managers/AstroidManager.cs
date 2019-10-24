@@ -32,15 +32,15 @@ public class AstroidManager
 
     public List<Astroid> astroids { get; private set; }
 
-    List<string> astroidType = new List<string> {"Asteroid_01_S", "Asteroid_02_M", "Asteroid_03_L", "Asteroid_04_XL", "Asteroid_05_XXL"};
+    List<string> astroidType = new List<string> {"Asteroid 1", "Asteroid 2", "Asteroid 3"};
 
 
     public void Initialize()
     {
         raycastSource = GameObject.FindGameObjectWithTag("RayCastSource");
-        astroidPrefabs = new GameObject[5];
-        for (int i = 0; i < 5; i++){
-            astroidPrefabs[i] = Resources.Load<GameObject>("Others/AstroidPack/" + astroidType[i]);
+        astroidPrefabs = new GameObject[astroidType.Count];
+        for (int i = 0; i < astroidType.Count; i++){
+            astroidPrefabs[i] = Resources.Load<GameObject>("Others/Asteroids Pack/Assets/Prefabs/" + astroidType[i]);
         }
         astroidParent = new GameObject("AstroidParent").transform;
         astroids = new List<Astroid>();
@@ -56,7 +56,7 @@ public class AstroidManager
             if (timer <= 0)
             {
                 timer = astroidSpawnCooldownTime;
-                SpawnAstroid();
+                SpawnRandomAstroid();
                 NumOfAstroids++;
             }
         }
@@ -79,9 +79,9 @@ public class AstroidManager
         return pos;
     }
 
-    void SpawnAstroid()
+    void SpawnRandomAstroid()
     {
-        GameObject go = GameObject.Instantiate(astroidPrefabs[ProbabilityFunctions.DiceRoll(0,5)], GetRandomUnoccupiedLocation(), Quaternion.identity, astroidParent.transform);
+        GameObject go = GameObject.Instantiate(astroidPrefabs[ProbabilityFunctions.DiceRoll(astroidType.Count)], GetRandomUnoccupiedLocation(), Quaternion.identity, astroidParent.transform);
         Astroid a = go.AddComponent<Astroid>();
         a.Initialize();
         astroids.Add(a);
