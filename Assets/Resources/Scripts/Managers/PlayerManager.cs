@@ -24,7 +24,7 @@ public class PlayerManager
 
     public void Initialize()
     {
-        player = GameObject.Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity).AddComponent<Player>();
+        player = GameObject.Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<Player>();
         player.Initialize();
     }
 

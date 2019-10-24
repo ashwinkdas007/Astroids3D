@@ -16,12 +16,13 @@ public class SkyboxManager
     private static SkyboxManager instance;
     #endregion
 
-    TitleShipMovement titleShipMovement;
+    MainMenuShip titleShipMovement;
+    
     
     public void Initialize()
     {
         GameObject playerPrefab = Resources.Load<GameObject>("Prefabs/SpaceShipTitle");
-        titleShipMovement = GameObject.Instantiate(playerPrefab, new Vector3(0, 0, 16),new Quaternion(0,90,0,90)).GetComponent<TitleShipMovement>();
+        titleShipMovement = GameObject.Instantiate(playerPrefab, new Vector3(0, 0, 16),new Quaternion(0,90,0,90)).GetComponent<MainMenuShip>();
         titleShipMovement.Initialize();
 
     }

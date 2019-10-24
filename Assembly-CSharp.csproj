@@ -65,13 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Resources\Others\StarSparrow\Readme\Readme Files\Scripts\Readme.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Alien.cs" />
-    <Compile Include="Assets\Resources\Scripts\Entities\Aliens.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Astroid.cs" />
-    <Compile Include="Assets\Resources\Scripts\Entities\Astroids.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Bullets.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\ISpawnable.cs" />
+    <Compile Include="Assets\Resources\Scripts\Entities\MainMenuShip.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Player.cs" />
-    <Compile Include="Assets\Resources\Scripts\Entities\TitleShipMovement.cs" />
     <Compile Include="Assets\Resources\Scripts\Entities\Unit.cs" />
     <Compile Include="Assets\Resources\Scripts\Flow\GameFlow.cs" />
     <Compile Include="Assets\Resources\Scripts\Flow\MainEntity.cs" />
@@ -79,10 +77,12 @@
     <Compile Include="Assets\Resources\Scripts\Managers\AstroidManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\BulletManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\LevelManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Managers\MainMenuManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\SkyboxManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\UnitManager.cs" />
     <Compile Include="Assets\Resources\Scripts\ProbabilityFunctions.cs" />
+    <Compile Include="Assets\Resources\Scripts\SceneSwitcher.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Git/Astroids3D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
