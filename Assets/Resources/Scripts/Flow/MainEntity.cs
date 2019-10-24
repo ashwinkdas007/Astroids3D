@@ -6,23 +6,34 @@ public class MainEntity : MonoBehaviour
 {
     void Start()
     {
-        GameFlow.Instance.PostInitialize();
+        if (!gameObject.name.Equals("SkyboxMove"))
+            GameFlow.Instance.PostInitialize();
+        if (gameObject.name.Equals("SkyboxMove"))
+            SkyboxManager.Instance.PostInitialize();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameFlow.Instance.Refresh();
+        if (!gameObject.name.Equals("SkyboxMove"))
+            GameFlow.Instance.Refresh();
+        if (gameObject.name.Equals("SkyboxMove"))
+            SkyboxManager.Instance.Refresh();
     }
 
     private void Awake()
     {
-        GameFlow.Instance.Initialize();
+        if (!gameObject.name.Equals("SkyboxMove"))
+            GameFlow.Instance.Initialize();
+        if (gameObject.name.Equals("SkyboxMove"))
+            SkyboxManager.Instance.Initialize();
     }
 
     private void FixedUpdate()
     {
-        GameFlow.Instance.PhysicsRefresh();
-
+        if (gameObject.name.Equals("SkyboxMove"))
+            SkyboxManager.Instance.PhysicsRefresh();
+        if (!gameObject.name.Equals("SkyboxMove"))
+            GameFlow.Instance.PhysicsRefresh();
     }
 }

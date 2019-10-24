@@ -19,23 +19,28 @@ public class GameFlow {
     {
         PlayerManager.Instance.Initialize();
         AstroidManager.Instance.Initialize();
+        SkyboxManager.Instance.Initialize();
     }
 
     public void PostInitialize()
     {
         PlayerManager.Instance.PostInitialize();
+        SkyboxManager.Instance.PostInitialize();
         //AstroidManager.Instance.PostInitialize();
     }
     public void Refresh()
     {
         PlayerManager.Instance.Refresh();
         AstroidManager.Instance.Refresh();
+        SkyboxManager.Instance.Refresh();
+        
     }
 
     public void PhysicsRefresh()
     {
         PlayerManager.Instance.PhysicsRefresh();
         //AstroidManager.Instance.PhysicsRefresh();
+        SkyboxManager.Instance.PhysicsRefresh();
     }
 
 
