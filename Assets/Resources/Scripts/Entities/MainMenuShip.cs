@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMenuShip:MonoBehaviour
 {
-    public GameObject go;
+    //public GameObject go;
     bool Up = true;
 
 
