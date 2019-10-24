@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 5627656175042312093}
   - component: {fileID: 5638333647866078573}
   - component: {fileID: 372439196568581941}
-  - component: {fileID: -3388184896877809942}
+  - component: {fileID: -5655504112164349864}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &-3388184896877809942
+--- !u!114 &-5655504112164349864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

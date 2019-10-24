@@ -16,7 +16,7 @@ public class GameFlow {
     private GameFlow() { }
     #endregion
 
-    public bool startGame;
+    [HideInInspector]public bool startGame;
 
     public void Initialize()
     {

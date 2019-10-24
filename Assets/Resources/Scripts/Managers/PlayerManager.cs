@@ -20,7 +20,8 @@ public class PlayerManager
     
 
     Player player;
-    public GameObject playerPrefab = Resources.Load<GameObject>("Prefabs/SpaceShip");
+    GameObject playerPrefab = Resources.Load<GameObject>("Prefabs/SpaceShip");
+
 
     public void Initialize()
     {
